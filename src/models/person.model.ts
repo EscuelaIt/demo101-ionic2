@@ -1,13 +1,20 @@
 export class Person {
-  name;
-  age;
 
-  constructor (name, age) {
-    this.name = name;
-    this.age = age;
+  constructor (
+    private name: string,
+    private age: number,
+    private single: boolean = false
+  ) {}
+
+  public getName(): string{
+    return this.name;
   }
 
-  getName(){
-    return this.name;
+  public sumAge(sum: number): void{
+    this.age+= sum;
+  }
+
+  private setName(){
+    this.name = 'nicolasssss';
   }
 }
