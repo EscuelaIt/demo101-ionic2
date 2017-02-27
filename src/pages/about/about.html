@@ -7,5 +7,25 @@
 </ion-header>
 
 <ion-content padding>
+  <h1>{{ twitter }}</h1>
+  <input type="text" [value]="twitter">
+  <button (click)="showAlert()">Hola</button>
+  <input type="text" [value]="twitter" (input)="twitter = $event.target.value">
+  <input type="text" [(ngModel)]="twitter">
 
+  <p #myVar>Hola mundo</p>
+  <button (click)="changeDom()">
+    Hola
+  </button>
+
+  <p *ngIf="twitter == '@nicobytes'">hola nuevos mundos</p>
+  <p *ngIf="twitter != '@nicobytes'">hola mismos mundos</p>
+  <ul>
+    <li *ngIf="numbers.length == 0">No hay numeros</li>
+    <li *ngFor="let number of numbers">
+      {{ number }}
+    </li>
+  </ul>
+  <button (click)="addNumber()">add number</button>
+  <button (click)="removeNumber()">remove number</button>
 </ion-content>

@@ -10,6 +10,9 @@ export class Person {
     return this.name;
   }
 
+  /*
+   suma la edad
+  */
   public sumAge(sum: number): void{
     this.age+= sum;
   }
